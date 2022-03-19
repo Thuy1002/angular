@@ -1,0 +1,46 @@
+<div class="container">
+    <p>{{productForm.value | json}}</p>
+    <p>{{newProduct | json}}</p>
+    <div class="row">
+        <div class=" col-md-4">
+            <form #productForm="ngForm" action="" class="form" (submit)="onSubmit(productForm.value)">
+                <div class="form-group mb-2">
+                    <input type="text" class="form-control" name="name" [value]="Product_update.name" [(ngModel)]="newProduct.name" placeholder="Name">
+                </div>
+                <div class="form-group  mb-2">
+                    <input type="text" class="form-control" name="price" [value]="Product_update.price" [(ngModel)]="newProduct.price" placeholder="Price">
+                </div>
+                <div class="form-group  mb-2">
+                    <input type="text" class="form-control" name="desc" [value]="Product_update.desc" [(ngModel)]="newProduct.desc" placeholder="Desc">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-8">
+            <table class="table table-hover">
+                <thead>
+                    <th>Tên Sản Phẩm</th>
+                    <th>Giá</th>
+                    <th> Mô Tả</th>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let p of listProduct">
+
+                        <td>{{p.name}}</td>
+                        <td>{{p.price}}</td>
+                        <td>{{p.desc}}</td>
+                        <td><button class="btn btn-danger"> Xoa</button>
+                            <button (click)="onEdit(p)" class="btn btn-warning"> Sua</button>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</div>

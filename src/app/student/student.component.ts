@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-student',
+  templateUrl: './student.component.html',
+  styleUrls: ['./student.component.css']
 })
-export class AppComponent {
+export class StudentComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
   // Định nghĩa 1 mảng các phần tử user, gồm các thuộc tính:
   // tên, cân nặng, chiều cao, ảnh, id
   // Thực hiện việc hiển thị danh sách user ra bảng
