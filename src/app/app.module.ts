@@ -14,9 +14,11 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductService } from './services/product.service';
 import  {HttpClientModule} from '@angular/common/http';
+
+
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
-import { AsideComponent } from './layout/aside/aside.component';
+import { AsideComponent } from './layouts/aside/aside.component';
 import { LayoutComponent } from './layouts/layout/layout.component';
 
 
@@ -35,7 +37,6 @@ import { LayoutComponent } from './layouts/layout/layout.component';
     FooterComponent,
     AsideComponent,
     LayoutComponent
-    
     
   ],
   imports: [
