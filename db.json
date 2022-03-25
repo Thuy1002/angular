@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone",
+      "price": 19999,
+      "desc": "wwwwww"
+    },
+    {
+      "name": "xây dựng trang web",
+      "price": "05",
+      "desc": "html và css",
+      "id": 2
+    },
+    {
+      "name": "uiuiuiui",
+      "price": "03",
+      "desc": "uuôiioioi",
+      "id": 3
+    }
+  ]
+}

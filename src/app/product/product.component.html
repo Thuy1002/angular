@@ -18,24 +18,35 @@
                 </div>
             </form>
         </div>
+        <div style="margin-top: 20px;" class="col-md-12">
+            <a routerLink="/product/create">
+                <button class="btn btn-primary">
+                  Tạo mới
+                </button>
+            </a>
+        </div>
         <div class="col-md-8">
-            <table class="table table-hover">
+            <table class="table table-hover table-bordered">
                 <thead>
+                    <th>ID</th>
                     <th>Tên Sản Phẩm</th>
                     <th>Giá</th>
                     <th> Mô Tả</th>
+                    <th> Hành Động</th>
                 </thead>
                 <tbody>
 
-                    <tr *ngFor="let p of listProduct">
-
+                    <tr *ngFor="let p of product">
+                        <!-- product phần dbjson -->
+                        <td>{{p.id}}</td>
                         <td>{{p.name}}</td>
                         <td>{{p.price}}</td>
                         <td>{{p.desc}}</td>
-                        <td><button class="btn btn-danger"> Xoa</button>
-                            <button (click)="onEdit(p)" class="btn btn-warning"> Sua</button>
+                        <td><button (click)="onDelete(p.id)" class=" ms-2 btn btn-danger"> Xoa</button>
+                            <!-- <button (click)="onEdit(p)" class=" ms-2  btn btn-warning"> Sua</button> -->
+                            <a [routerLink]="['/product',p.id,'edit']"> <button (click)="onEdit(p)" class=" ms-2  btn btn-warning"> Sua</button></a>
+                            <a [routerLink]="['/product',p.id]"> <button (click)="onEdit(p)" class="  ms-2  btn btn-success"> Chi Tiết</button></a>
                         </td>
-
                     </tr>
                 </tbody>
             </table>
