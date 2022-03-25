@@ -10,6 +10,17 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { StudentComponent } from './student/student.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductFormComponent } from './product-form/product-form.component';
+import { ProductService } from './services/product.service';
+import  {HttpClientModule} from '@angular/common/http';
+import { HeaderComponent } from './layouts/header/header.component';
+import { FooterComponent } from './layouts/footer/footer.component';
+import { AsideComponent } from './layout/aside/aside.component';
+import { LayoutComponent } from './layouts/layout/layout.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -17,15 +28,24 @@ import { StudentComponent } from './student/student.component';
     LoginComponent,
     RegisterComponent,
     ProductComponent,
-    StudentComponent
+    StudentComponent,
+    ProductDetailComponent,
+    ProductFormComponent,
+    HeaderComponent,
+    FooterComponent,
+    AsideComponent,
+    LayoutComponent
+    
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule //import cho các component con sử dụng được
+    FormsModule, //import cho các component con sử dụng được
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
