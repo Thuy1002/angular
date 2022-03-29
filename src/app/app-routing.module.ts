@@ -4,11 +4,15 @@ import { AppComponent } from './app.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductComponent } from './product/product.component';
+import { RegisterComponent } from './register/register.component';
 import { StudentComponent } from './student/student.component';
 
 const routes: Routes = [
   {
-    
+    path: '',
+    component: ProductComponent
+  },
+  {
     path: 'product',
     component: ProductComponent
   },
@@ -27,9 +31,14 @@ const routes: Routes = [
   {
     path: 'student',
     component: StudentComponent
-  }, {
+  },
+   {
     path: 'app',
     component: AppComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   },
 ];
 
