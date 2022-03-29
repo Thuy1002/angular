@@ -1,23 +1,7 @@
 <div class="container">
-    <p>{{productForm.value | json}}</p>
-    <p>{{newProduct | json}}</p>
-    <div class="row">
-        <div class=" col-md-4">
-            <form #productForm="ngForm" action="" class="form" (submit)="onSubmit(productForm.value)">
-                <div class="form-group mb-2">
-                    <input type="text" class="form-control" name="name" [value]="Product_update.name" [(ngModel)]="newProduct.name" placeholder="Name">
-                </div>
-                <div class="form-group  mb-2">
-                    <input type="text" class="form-control" name="price" [value]="Product_update.price" [(ngModel)]="newProduct.price" placeholder="Price">
-                </div>
-                <div class="form-group  mb-2">
-                    <input type="text" class="form-control" name="desc" [value]="Product_update.desc" [(ngModel)]="newProduct.desc" placeholder="Desc">
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-success">Submit</button>
-                </div>
-            </form>
-        </div>
+    <!-- <p>{{productForm.value | json}}</p>
+    <p>{{newProduct | json}}</p> -->
+    <div class="row w-screen">
         <div style="margin-top: 20px;" class="col-md-12">
             <a routerLink="/product/create">
                 <button class="btn btn-primary">

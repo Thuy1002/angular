@@ -1,0 +1,7 @@
+<div class="text-danger" *ngIf="formData.get('key')?.dirty">
+    <p *ngIf="let error of formData.get('key')?.errors|keyvalue">
+        User name không được để trống</p>
+    <!-- <p *ngIf="formData.get('key')?.errors?.['required']">User name không được để trống</p>
+    <p *ngIf="formData.get('key')?.errors?.['minlength']">User name phải nhiều hơn 6 ký tự</p>
+    <p *ngIf="formData.get('key')?.errors?.['hasName']">Username phải có từ 'thuy'</p> -->
+</div>

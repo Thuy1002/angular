@@ -15,13 +15,15 @@ import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductService } from './services/product.service';
 import  {HttpClientModule} from '@angular/common/http';
 
-
-import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { AsideComponent } from './layouts/aside/aside.component';
 import { LayoutComponent } from './layouts/layout/layout.component';
 
 
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { ShowValidateComponent } from './components/show-validate/show-validate.component';
+import { HeaderComponent } from './layouts/header/header.component';
 
 
 @NgModule({
@@ -33,10 +35,11 @@ import { LayoutComponent } from './layouts/layout/layout.component';
     StudentComponent,
     ProductDetailComponent,
     ProductFormComponent,
-    HeaderComponent,
     FooterComponent,
     AsideComponent,
-    LayoutComponent
+    LayoutComponent,
+    ShowValidateComponent,
+    HeaderComponent
     
   ],
   imports: [
@@ -44,7 +47,8 @@ import { LayoutComponent } from './layouts/layout/layout.component';
     AppRoutingModule,
     NgbModule,
     FormsModule, //import cho các component con sử dụng được
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
