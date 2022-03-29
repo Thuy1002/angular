@@ -1,14 +1,9 @@
-<p>register!</p>
-<!-- <p>{{registerForm.value | json}}</p> -->
+<p>{{registerForm.get('username')?.errors | json}}</p>
 <form [formGroup]="registerForm">
     <div class="form-grounp">
         <label for="">User Name</label>
         <input type="text" formControlName="username">
-        <app-show-validate 
-        [form]="registerForm"
-        Key="username" 
-        ></app-show-validate>
-
+        <app-show-validate [form]="registerForm" key="username"></app-show-validate>
     </div>
     <div class="form-grounp">
         <label for="">Pass</label>

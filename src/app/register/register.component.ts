@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
   checkUsername(control: AbstractControl) :ValidationErrors|null {
     const username = control.value;
     if(!username.includes('thuy')){
-      return{hasName:true};
+      return {hasName: true}; // obj này sẽ được trả về trong errors
     }
     return null;
   }
