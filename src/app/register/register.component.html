@@ -1,32 +1,28 @@
 <p>{{registerForm.get('username')?.errors | json}}</p>
-<form [formGroup]="registerForm">
+<form [formGroup]="registerForm" style="width:500px;">
     <div class="form-grounp">
-        <label for="">User Name</label>
-        <input type="text" formControlName="username">
-        <app-show-validate [form]="registerForm" key="username"></app-show-validate>
+        <label for="username">Username</label>
+        <input class="form-control" type="text" formControlName="username">
+        <app-show-validate [formField]="registerForm.get('username')" key="Username">
+        </app-show-validate>
     </div>
     <div class="form-grounp">
         <label for="">Pass</label>
-        <input type="text" formControlName="password">
-        <div class="text-danger" *ngIf="registerForm.get('password')?.dirty">
-            <p *ngIf="registerForm.get('password')?.errors?.['required']">Pass không được để trống</p>
-        </div>
+        <input type="text" class="form-control" formControlName="password">
+        <app-show-validate [formField]="registerForm.get('password')" key="Pass">
+        </app-show-validate>
     </div>
     <div class="form-grounp">
         <label for="">Name</label>
-        <input type="text" formControlName="name">
-        <div class="text-danger" *ngIf="registerForm.get('name')?.dirty">
-            <p *ngIf="registerForm.get('name')?.errors?.['required']"> Name không được để trống</p>
-            <p *ngIf="registerForm.get('name')?.errors?.['minlength']"> Name phải nhiều hơn 6 ký tự</p>
-        </div>
+        <input type="text" class="form-control" formControlName="name">
+        <app-show-validate [formField]="registerForm.get('name')" key="Tên đăng ký">
+        </app-show-validate>
     </div>
     <div class="form-grounp">
         <label for="">Mail</label>
-        <input type="text" formControlName="email">
-        <div class="text-danger" *ngIf="registerForm.get('email')?.dirty">
-            <p *ngIf="registerForm.get('email')?.errors?.['required']">Email không được để trống</p>
-            <p *ngIf="registerForm.get('email')?.errors?.['email']">Vui long nhập đúng địa chỉ email</p>
-        </div>
+        <input type="text" class="form-control" formControlName="email">
+        <app-show-validate [formField]="registerForm.get('email')" key="Email">
+        </app-show-validate>
     </div>
 
     <div class="btn btn-success"><button>submit</button></div>

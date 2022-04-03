@@ -8,7 +8,7 @@ import { FormGroup } from '@angular/forms';
 export class ShowValidateComponent implements OnInit {
   //nếu không chuyền vào input thì biến sẽ là tên biến bên trang chuyền
   //nếu có thì chuyền vào bên kia chuyền đặt vào biens mới
-  @Input('form') formData: any;
+  @Input('formField') formData: any;
   @Input() key: string;
   constructor() {
     this.key = '';

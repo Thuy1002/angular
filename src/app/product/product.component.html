@@ -1,41 +1,91 @@
 <div class="container">
-    <!-- <p>{{productForm.value | json}}</p>
-    <p>{{newProduct | json}}</p> -->
-    <div class="row w-screen">
-        <div style="margin-top: 20px;" class="col-md-12">
-            <a routerLink="/product/create">
+    <!-- <p>{{productForm.value | json}}</p> -->
+
+    <p>{{newProduct | json}}</p>
+
+    <div class="row">
+        <!-- <div class="col-md-6">
+        <form #productForm="ngForm" class="form" (submit)="onSubmit(productForm.value)">
+          <div class="form-group">
+            <input
+            type="text"
+            class="form-control"
+            placeholder="name"
+            name="name"
+            [(ngModel)]="newProduct.name"
+            >
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="price"
+              name="price"
+              [(ngModel)]="newProduct.price"
+              >
+          </div>
+          <div class="form-group">
+            <input
+            type="text"
+            class="form-control"
+            placeholder="desc"
+            name="desc"
+            [(ngModel)]="newProduct.desc"
+            >
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-success">Submit</button>
+          </div>
+        </form>
+      </div> -->
+        <div class="col-md-12">
+            <a routerLink="./create">
                 <button class="btn btn-primary">
-                  Tạo mới
-                </button>
+            Tạo mới
+          </button>
             </a>
         </div>
-        <div class="col-md-8">
-            <table class="table table-hover table-bordered">
+        <div class="col-md-12">
+            <table class="table table-hover table-border">
                 <thead>
-                    <th>ID</th>
-                    <th>Tên Sản Phẩm</th>
-                    <th>Giá</th>
-                    <th> Mô Tả</th>
-                    <th> Hành Động</th>
+                    <tr>
+                        <td scope="col">ID</td>
+                        <td scope="col">Ten SP</td>
+                        <td scope="col">Gia SP</td>
+                        <td scope="col">Mo ta SP</td>
+                        <!-- <td scope="col">Ảnh</td> -->
+                        <td scope="col">Trang thai</td>
+                        <td scope="col">Hanh dong</td>
+                    </tr>
                 </thead>
                 <tbody>
-
-                    <tr *ngFor="let p of product">
-                        <!-- product phần dbjson -->
-                        <td>{{p.id}}</td>
-                        <td>{{p.name}}</td>
-                        <td>{{p.price}}</td>
-                        <td>{{p.desc}}</td>
-                        <td><button (click)="onDelete(p.id)" class=" ms-2 btn btn-danger"> Xoa</button>
-                            <!-- <button (click)="onEdit(p)" class=" ms-2  btn btn-warning"> Sua</button> -->
-                            <a [routerLink]="['/product',p.id,'edit']"> <button (click)="onEdit(p)" class=" ms-2  btn btn-warning"> Sua</button></a>
-                            <a [routerLink]="['/product',p.id]"> <button (click)="onEdit(p)" class="  ms-2  btn btn-success"> Chi Tiết</button></a>
+                    <tr *ngFor="let product of products">
+                        <td scope="row">{{product.id}}</td>
+                        <td scope="row">
+                            <app-product-name [name]="product.name"></app-product-name>
+                        </td>
+                        <td scope="row">{{product.price}}</td>
+                        <td scope="row">
+                            <app-product-name [name]="product.desc"></app-product-name>
+                        </td>
+                        <!-- <td scope="row">{{product.img}}</td> -->
+                        <!-- <td>{{product.status}}</td> -->
+                        <td scope="row">
+                            <app-status [status]="product.status" (changeStatus)="parentChangeStatus($event, product.id)">
+                            </app-status>
+                        </td>
+                        <td scope="row">
+                            <a [routerLink]="['./product', product.id]">
+                                <button class="btn btn-primary">Xem chi tiet</button>
+                            </a>
+                            <a [routerLink]="['./product', product.id, 'edit']">
+                                <button class="btn btn-warning">Chinh sua</button>
+                            </a>
+                            <button (click)="onDelete(product.id)" class="btn btn-danger">Xoa</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
-
         </div>
     </div>
-
 </div>
