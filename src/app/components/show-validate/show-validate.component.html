@@ -1,10 +1,10 @@
 <div class="text-danger" *ngIf="formData.dirty">
     <p *ngIf="formData?.errors?.['required']">
-        {{key}} không được để trống</p>
+        {{key}} lớn hơn $ 5555</p>
     <p *ngIf="formData?.errors?.['minlength']">
-        {{key}} từ 6 ks tự </p>
+        {{key}} dài hơn 6 ký tự </p>
     <p *ngIf="formData?.errors?.['hasName']">
-        {{key}} bắt buốc phải có chữ 'thuy'</p>
+        {{key}} dài và bắt buộc có chữ 'thuy'</p>
     <p *ngIf="formData?.errors?.['email']">
         {{key}} Email không được định dạng</p>
 </div>

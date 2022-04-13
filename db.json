@@ -1,24 +1,53 @@
 {
-    "products": [{
-            "name": "Samsung Galaxy s5- 2015",
-            "price": 700,
-            "desc": "Samsung Galaxy S là một chiếc điện thoại thông minh màn hình cảm ứng dạng thanh chạy hệ điều hành Android do Samsung Electronics thiết kế, phát triển và tiếp thị. Nó là thiết bị đầu tiên của dòng điện thoại thông minh Android thứ ba được sản xuất bởi Samsung. Nó được công bố với báo chí vào tháng 3 năm 2010 và mở bán vào tháng 6 năm 2010",
-            "id": 1,
-            "status": 1
-        },
-        {
-            "name": "Nokia Lumia 1320",
-            "price": "899",
-            "desc": "Nokia Lumia 1320 là một điện thoại thông minh kiểu phablet mới trong dòng Lumia được phát triển bởi Nokia và chạy hệ điều hành Windows Phone 8. Nó đã được công bố tại sự kiện Nokia World vào ngày 22 tháng 10 năm 2013. Nó đã được phát hành tại châu Á trong quý đầu tiên của năm 2014, bao gồm cả phát hành tại Ấn Độ trong tháng 1 năm 2014. Nó có màn hình 6 inch ClearBlack IPS LCD, khiến nó trở thành chiếc điện thoại Windows có màn hình lớn nhất cùng với Nokia Lumia 1520s",
-            "id": 2,
-            "status": 1
-        },
-        {
-            "name": "Sony microsoft",
-            "price": "588",
-            "desc": "uuôiioioi",
-            "id": 3,
-            "status": 1
-        }
-    ]
+  "products": [
+    {
+      "name": "Nokia Lumia 1320",
+      "price": "6766767",
+      "desc": "Nokia Lumia 1320 là một điện thoại thông minh kiểu phablet mới trong dòng Lumia được phát triển bởi Nokia và chạy hệ điều hành Windows Phone 8. Nó đã được công bố tại sự kiện Nokia World vào ngày 22 tháng 10 năm 2013. Nó đã được phát hành tại châu Á trong quý đầu tiên của năm 2014, bao gồm cả phát hành tại Ấn Độ trong tháng 1 năm 2014. Nó có màn hình 6 inch ClearBlack IPS LCD, khiến nó trở thành chiếc điện thoại Windows có màn hình lớn nhất cùng với Nokia Lumia 1520s",
+      "id": 2,
+      "status": 1
+    },
+    {
+      "name": "Sony microsoft",
+      "price": "588",
+      "desc": "uuôiioioi",
+      "id": 3,
+      "status": 1
+    },
+    {
+      "name": "Samsung Galaxy s5- 2015",
+      "price": 700,
+      "desc": "Samsung Galaxy S là một chiếc điện thoại thông minh màn hình cảm ứng dạng thanh chạy hệ điều hành Android do Samsung Electronics thiết kế, phát triển và tiếp thị. Nó là thiết bị đầu tiên của dòng điện thoại thông minh Android thứ ba được sản xuất bởi Samsung. Nó được công bố với báo chí vào tháng 3 năm 2010 và mở bán vào tháng 6 năm 2010",
+      "id": 4,
+      "status": 1
+    },
+    {
+      "name": "Nokia Lumia 1320",
+      "price": "6766767",
+      "desc": "Nokia Lumia 1320 là một điện thoại thông minh kiểu phablet mới trong dòng Lumia được phát triển bởi Nokia và chạy hệ điều hành Windows Phone 8. Nó đã được công bố tại sự kiện Nokia World vào ngày 22 tháng 10 năm 2013. Nó đã được phát hành tại châu Á trong quý đầu tiên của năm 2014, bao gồm cả phát hành tại Ấn Độ trong tháng 1 năm 2014. Nó có màn hình 6 inch ClearBlack IPS LCD, khiến nó trở thành chiếc điện thoại Windows có màn hình lớn nhất cùng với Nokia Lumia 1520s",
+      "status": 1,
+      "id": 5
+    },
+    {
+      "name": "Sony microsoft",
+      "price": "588",
+      "desc": "uuôiioioi",
+      "id": 6,
+      "status": 1
+    },
+    {
+      "name": "Samsung Galaxy s5- 2015",
+      "price": 700,
+      "desc": "Samsung Galaxy S là một chiếc điện thoại thông minh màn hình cảm ứng dạng thanh chạy hệ điều hành Android do Samsung Electronics thiết kế, phát triển và tiếp thị. Nó là thiết bị đầu tiên của dòng điện thoại thông minh Android thứ ba được sản xuất bởi Samsung. Nó được công bố với báo chí vào tháng 3 năm 2010 và mở bán vào tháng 6 năm 2010",
+      "id": 7,
+      "status": 1
+    },
+    {
+      "name": "Nokia Lumia 1320",
+      "price": "6766767",
+      "desc": "Nokia Lumia 1320 là một điện thoại thông minh kiểu phablet mới trong dòng Lumia được phát triển bởi Nokia và chạy hệ điều hành Windows Phone 8. Nó đã được công bố tại sự kiện Nokia World vào ngày 22 tháng 10 năm 2013. Nó đã được phát hành tại châu Á trong quý đầu tiên của năm 2014, bao gồm cả phát hành tại Ấn Độ trong tháng 1 năm 2014. Nó có màn hình 6 inch ClearBlack IPS LCD, khiến nó trở thành chiếc điện thoại Windows có màn hình lớn nhất cùng với Nokia Lumia 1520s",
+      "id": 8,
+      "status": 1
+    }
+  ]
 }

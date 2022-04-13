@@ -1,43 +1,40 @@
 <div class="container">
     <!-- <p>{{productForm.value | json}}</p> -->
+    <!-- 
+    <p>{{newProduct | json}}</p> -->
 
-    <p>{{newProduct | json}}</p>
+
+
 
     <div class="row">
-        <!-- <div class="col-md-6">
-        <form #productForm="ngForm" class="form" (submit)="onSubmit(productForm.value)">
-          <div class="form-group">
-            <input
-            type="text"
-            class="form-control"
-            placeholder="name"
-            name="name"
-            [(ngModel)]="newProduct.name"
-            >
-          </div>
-          <div class="form-group">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="price"
-              name="price"
-              [(ngModel)]="newProduct.price"
-              >
-          </div>
-          <div class="form-group">
-            <input
-            type="text"
-            class="form-control"
-            placeholder="desc"
-            name="desc"
-            [(ngModel)]="newProduct.desc"
-            >
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-success">Submit</button>
-          </div>
-        </form>
-      </div> -->
+        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Message:</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Send message</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
         <div class="col-md-12">
             <a routerLink="./create">
                 <button class="btn btn-primary">
@@ -46,16 +43,17 @@
             </a>
         </div>
         <div class="col-md-12">
-            <table class="table table-hover table-border">
+            <table class="table table-border">
                 <thead>
                     <tr>
                         <td scope="col">ID</td>
                         <td scope="col">Ten SP</td>
                         <td scope="col">Gia SP</td>
-                        <td scope="col">Mo ta SP</td>
+                        <td style="width: 560px;" scope="col">Mo ta SP</td>
+
                         <!-- <td scope="col">Ảnh</td> -->
                         <td scope="col">Trang thai</td>
-                        <td scope="col">Hanh dong</td>
+                        <td class="text-center" scope="col">Hanh dong</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -68,24 +66,24 @@
                         <td scope="row">
                             <app-product-name [name]="product.desc"></app-product-name>
                         </td>
+
                         <!-- <td scope="row">{{product.img}}</td> -->
                         <!-- <td>{{product.status}}</td> -->
-                        <td scope="row">
+                        <td class="">
                             <app-status [status]="product.status" (changeStatus)="parentChangeStatus($event, product.id)">
                             </app-status>
                         </td>
-                        <td scope="row">
-                            <a [routerLink]="['./product', product.id]">
-                                <button class="btn btn-primary">Xem chi tiet</button>
+                        <td class=" d-flex">
+                            <!-- <a [routerLink]="[ product.id]">
+                                <button class=" btn btn-primary">Xem chi tiet</button>
+                            </a> -->
+                            <a [routerLink]="[ product.id, 'edit']">
+                                <button class=" btn btn-warning">Chỉnh sửa </button>
                             </a>
-                            <a [routerLink]="['./product', product.id, 'edit']">
-                                <button class="btn btn-warning">Chinh sua</button>
-                            </a>
-                            <button (click)="onDelete(product.id)" class="btn btn-danger">Xoa</button>
+                            <button (click)="onDelete(product.id)" class=" btn btn-danger">Xóa</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-</div>

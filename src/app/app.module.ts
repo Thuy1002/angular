@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -17,7 +17,6 @@ import  {HttpClientModule} from '@angular/common/http';
 
 import { FooterComponent } from './layouts2/admin/footer/footer.component';
 import { AsideComponent } from './layouts2/admin/aside/aside.component';
-import { LayoutComponent } from './layouts/layout/layout.component';
 
 
 
@@ -28,15 +27,21 @@ import { ProductNameComponent } from './components/product-name/product-name.com
 import { StatusComponent } from './components/status/status.component';
 import { HeaderHComponent } from './layouts2/client/header-h/header-h.component';
 import { MainHComponent } from './layouts2/client/main-h/main-h.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
 
 import { FooterHComponent } from './layouts2/client/footer-h/footer-h.component';
 import { AdminComponent } from './layouts2/admin/admin.component';
 import { ClientComponent } from './layouts2/client/client.component';
 import { CtspComponent } from './layouts2/client/ctsp/ctsp.component';
+import { HomeAdminComponent } from './layouts2/admin/home-admin/home-admin.component';
+import { ShopComponent } from './layouts2/client/shop/shop.component';
 
 
 @NgModule({
   declarations: [
+ 
     AppComponent,
     LoginComponent,
     RegisterComponent,
@@ -46,7 +51,6 @@ import { CtspComponent } from './layouts2/client/ctsp/ctsp.component';
     ProductFormComponent,
     FooterComponent,
     AsideComponent,
-    LayoutComponent,
     ShowValidateComponent,
     HeaderComponent,
     ProductNameComponent,
@@ -57,10 +61,15 @@ import { CtspComponent } from './layouts2/client/ctsp/ctsp.component';
     FooterHComponent,
     AdminComponent,
     ClientComponent,
-    CtspComponent
+    CtspComponent,
+    HomeAdminComponent,
+    ShopComponent
     
   ],
   imports: [
+    CommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     NgbModule,

@@ -109,6 +109,7 @@
 //   }
 // }
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { ProductService } from '../services/product.service';
 
 type PRODUCT_TYPE = {
@@ -125,7 +126,8 @@ type PRODUCT_TYPE = {
 })
 export class ProductComponent implements OnInit {
   products:any;
-  constructor(private ps: ProductService) { }
+  constructor(private ps: ProductService,
+    private  toastr:ToastrService ) { }
 
   ngOnInit(): void {
     this.onGetList();
@@ -148,8 +150,13 @@ export class ProductComponent implements OnInit {
   }
 
   onDelete(id: number|string) {
-    if (id) {
-      this.ps.deleteProduct(id).subscribe(data => {
+
+    const conf = window.confirm("Bạn có chắc muốn xóa")
+    if (id && conf) {
+      this.ps.deleteProduct(id).subscribe(data => { 
+        this.toastr.success(" Xóa thành công", "Thông báo",{
+          timeOut:2000
+        })
         this.onGetList();
       });
     }
